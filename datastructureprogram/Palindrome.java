@@ -1,0 +1,21 @@
+package com.bridgelabz.datastructureprogram;
+
+import java.util.Scanner;
+
+public class Palindrome 
+{
+      public static void main(String[] args)
+      {
+		   Scanner sc=new Scanner(System.in);
+		   System.out.println("Enter a string.. ");
+		   String value=sc.next();
+		   String[] array=value.split("");
+		    int len=array.length;
+		   Queue que=new Queue();
+		   que.setSize(len);
+		   int size=que.getSize();
+		   que.deque(array);
+		   
+		  
+	}
+}
