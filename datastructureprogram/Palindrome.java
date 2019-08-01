@@ -2,6 +2,8 @@ package com.bridgelabz.datastructureprogram;
 
 import java.util.Scanner;
 
+import com.bridgelabz.utility.Queue;
+
 public class Palindrome 
 {
       public static void main(String[] args)

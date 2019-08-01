@@ -1,4 +1,4 @@
-package com.bridgelabz.datastructureprogram;
+package com.bridgelabz.utility;
 
 public class Queue
 {
@@ -17,19 +17,7 @@ public class Queue
 	}
 	String demo1=""; 
 	String demo=""; 
-	/*
-	 * String[] demo1; String[] demo;
-	 * 
-	 * public void enqueue(String[] array) { for (int i = 0; i < array.length; i++)
-	 * {
-	 * 
-	 * demo[rear]=array[i]; rear=rear+1; size=size+1; } } public void
-	 * dequeue(String[] data) { for (int i = size-1; i >=0; i--) {
-	 * demo1[front]=demo[i]; front=front+1; } } public boolean palind() { if
-	 * (demo1.equals(demo)) { return true; } else { return false; }
-	 * 
-	 * }
-	 */
+	
 
 
   public void deque(String[] data)
