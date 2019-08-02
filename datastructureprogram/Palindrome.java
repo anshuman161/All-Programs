@@ -3,6 +3,7 @@ package com.bridgelabz.datastructureprogram;
 import java.util.Scanner;
 
 import com.bridgelabz.utility.Queue;
+import com.bridgelabz.utility.QueuePalindrome;
 
 public class Palindrome 
 {
@@ -13,10 +14,10 @@ public class Palindrome
 		   String value=sc.next();
 		   String[] array=value.split("");
 		    int len=array.length;
-		   Queue que=new Queue();
+		   QueuePalindrome que=new QueuePalindrome();
 		   que.setSize(len);
 		   int size=que.getSize();
-		   que.deque(array);
+		   que.enque(array);
 		   
 		  
 	}

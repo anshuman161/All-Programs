@@ -6,7 +6,7 @@ class Node<T> {
 	T data;
 	Node next;
 	int index;
-	
+	T temp;
 }
 
 public class LinkedList {
@@ -93,6 +93,32 @@ public class LinkedList {
 		Node node = head;
 	   return (char) node.data;	
 	}
+	
+	
+	public void sortList()   ///------------2
+    {  
+	 Node i,j;
+	 Node current = head;
+      i=head;
+      j=head.next;
+       Object temp; 
+      for (i = head; i !=null; i=i.next)
+      {
+		  for (j = head; j!=null ; j=j.next)
+		  {
+			  if (i.data.toString().compareTo((String) j.data)<0)
+				{
+				  	  temp = j.data;
+				  	 j.data=i.data;
+				  	 i.data=temp;
+				      	 
+				}
+			
+		}	
+		}
+      
+          
+    }
 	
 }
 //end

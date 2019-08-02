@@ -1,46 +1,97 @@
 package com.bridgelabz.utility;
 
-public class Queue
+public class Queue<T> 
 {
-  String data;
-  int size;
+  int arr[]=new int[50];
   int front;
   int rear;
-	
-	
-	public int getSize() {
-		return size;
-	}
-
-	public void setSize(int size) {
-		this.size = size;
-	}
-	String demo1=""; 
-	String demo=""; 
-	
-
-
-  public void deque(String[] data)
+  int size=11;
+  T[] data; 
+  public void addrear(T data)
   {
-	   
-	  for (int i = size-1; i >= 0; i--) 
-	     {
-			       demo=demo+data[i];
-	    	 
+	 if (rear==size)
+	 {
+	  System.out.println("overflow");	
+	 }
+	 else
+	 {
+		  arr[rear]=(int) data;
+			 rear++;
+          	         
+	 }
+  }
+	public void removerear()
+	{
+		if (front==rear)
+		{
+		  System.out.println("underflow");	
+		}
+		 rear=rear-1;
+          arr[rear]=0;		
+		 
+	} 
+	
+	public void addfront(T data)
+	{
+		 if (rear==size)
+		 {
+		  System.out.println("overflow");	
+		}
+		 else 
+		 {
+			for (int i = rear; i > front; i--) 
+			{
+			  arr[i]=arr[i-1];	
+			}
+			arr[front]=(int) data;
+			rear=rear+1;
 		 }
-	 
+	}
+	
+	public void removefront()
+	{
+		if (front==rear)
+		{
+		  System.out.println("underflow");	
+		}
+		else {
+		   arr[front]=0;
+		   front++;
+		}
+			 		
+	} 
+	
+	public int sort(int data)
+	{
+		int temp;
+		
+		for (int k = 0; k < size; k++) 
+		{
+			for (int h = 0; h < size-1; h++)
+			{
+			       if (arr[h]>arr[h+1])
+			       {
+					  temp=arr[h];
+					  arr[h]=arr[h+1];
+					  arr[h+1]=temp;
+				   }	
+			}
+		}
+		return data;
+	}
+	
+	public void put()
+	{
+	  	
+	}
+	
+  public void show()
+  {
+	  System.out.println("Element : ");
 	  for (int i = 0; i < size; i++) 
 	  {
-		    demo1=demo1+data[i];  
-	  }
-	 
-	   if (demo.equals(demo1))
-	   {
-		  System.out.println("Yes ! This is palindrome");
-	   }
-	   else {
-		System.out.println("No ! This is not palindrome");
+		System.out.println(arr[i]+" ");
 	}
-	       
-  }
+	  }
+	
 }

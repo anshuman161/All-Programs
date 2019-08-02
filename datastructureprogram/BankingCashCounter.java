@@ -31,7 +31,7 @@ class QueueList
 	/*
 	 * public void setSize(int size) { this.size = size; }
 	 */
- 
+    
 	public void push(int size)
 	{
 	  	System.out.println(size);
@@ -73,11 +73,18 @@ class QueueList
 	   }
 	}
 	
-	
-	/*
-	 * public void pop() { if (top == 0 ) {
-	 * System.out.println("no of people is underflow"); } else { top--; } }
-	 */
+	public void pop() 
+	{
+		if (top == 0)
+		{
+			System.out.println("no of people is underflow");
+		} 
+		else
+		{
+			top--;
+			
+		}
+	} 
 	
 	public void moneybalance()
 	{

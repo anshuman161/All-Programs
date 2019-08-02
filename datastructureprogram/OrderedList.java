@@ -20,7 +20,7 @@ public class OrderedList {
 		}
 
 		String[] arr = demo.split(" ");
-
+          
 		int[] array = Arrays.stream(arr).mapToInt(Integer::parseInt).toArray();
 
 		LinkedList2 ls = new LinkedList2();
