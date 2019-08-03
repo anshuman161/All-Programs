@@ -12,7 +12,7 @@ public class BankingCashCounter
 	    System.out.println("Enter no of people ...");     
 		int size=sc.nextInt();
 		
-		//qlist.setSize(size);
+		
 		
 		qlist.push(size);             
 		System.out.println();
@@ -28,9 +28,7 @@ class QueueList
 	
 	int money=0;    
     int amount=0;  
-	/*
-	 * public void setSize(int size) { this.size = size; }
-	 */
+	
     
 	public void push(int size)
 	{
@@ -46,28 +44,41 @@ class QueueList
 				  System.out.println(i+" no of people");
 				  Scanner sc=new Scanner(System.in);
 				  System.out.println("What do you want to do- withdraw or deposite :- ");
-				  String request=sc.next();
-				  //System.out.println(request);
-                  if (request.equalsIgnoreCase("deposite"))
-                  {
-                	   money=money+sc.nextInt();
-                	   System.out.println("Cash = "+money);
-                  }
-                  else if (request.equalsIgnoreCase("withdraw"))
-                  {
-                	          int rupees=sc.nextInt();
-                	  if (money >= rupees)
-                	  {
-                       		  money=money-rupees;
-                       		 System.out.println("Cash = "+money);
-                	  }
-                	  else 
-                	  {
-                		   amount=money-rupees;
+				  int request=sc.nextInt();
+				  switch (request)
+				  {
+				case 333:
+					  money=money+sc.nextInt();
+                 	   System.out.println("Cash = "+money);
+					
+					break;
+				case 666:
+					 int rupees=sc.nextInt();
+               	  if (money >= rupees)
+               	  {
+                      		  money=money-rupees;
+                      		 System.out.println("Cash = "+money);
+               	  }
+               	  else 
+               	  {
+               		   amount=money-rupees;
 						System.out.println("Cash is not available.");
 					  }
 						  
-				  }
+					
+					break;
+				
+				}
+				  //System.out.println(request);
+				/*
+				 * if (request.equalsIgnoreCase("deposite")) { money=money+sc.nextInt();
+				 * System.out.println("Cash = "+money); } else if
+				 * (request.equalsIgnoreCase("withdraw")) { int rupees=sc.nextInt(); if (money
+				 * >= rupees) { money=money-rupees; System.out.println("Cash = "+money); } else
+				 * { amount=money-rupees; System.out.println("Cash is not available."); }
+				 * 
+				 * }
+				 */
                   top++;
 			   }	      
 	   }
@@ -88,7 +99,7 @@ class QueueList
 	
 	public void moneybalance()
 	{
-	    if (amount >=0)
+	    if (amount >=0 )
 	    {
 		  System.out.println("Money is balanced");	
 		}	

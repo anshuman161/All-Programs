@@ -7,9 +7,6 @@ class NodeForOrder
 	int index;
 	
 }
-
-
-
 public class LinkedList2
 {
 	NodeForOrder head;
@@ -71,9 +68,7 @@ public class LinkedList2
 	  while (node.next != null)
 	   {
 		System.out.println(node.data);
-		
-		node = node.next;
-
+		node = node.next;   
 	  }
 	    System.out.println(node.data);
      }
@@ -88,10 +83,10 @@ public class LinkedList2
            	   	{
  				 NodeForOrder node=head;
  				NodeForOrder n=null;
- 				 for (int i = 0; i < index-1; i++) 
+ 				 for (int i = 0; i < index; i++) 
  				 {
  				   node=node.next;	
- 				 
+ 				   
  				}
  				 n=node.next;
  				 

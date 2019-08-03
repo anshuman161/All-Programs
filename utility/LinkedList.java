@@ -1,15 +1,20 @@
 package com.bridgelabz.utility;
 
 
-class Node<T> {
+class Node<T> 
+{
 
 	T data;
 	Node next;
 	int index;
 	T temp;
 }
-
-public class LinkedList {
+/**
+ * @
+ * 
+ * **/
+public class LinkedList 
+{
 	Node head;
 
 	public <T> void insert(T data)
@@ -61,7 +66,7 @@ public class LinkedList {
 				 {
 				   node=node.next;	
 				 
-				}
+				 }
 				 n=node.next;
 				 
 				 node.next=n.next;
@@ -93,7 +98,23 @@ public class LinkedList {
 		Node node = head;
 	   return (char) node.data;	
 	}
-	
+	public<T> void duplicate(T data,String sname) 
+	{
+		Node node=head;
+       Node dom=null;		
+		while (node.next!=null)
+		{
+		if (sname.equalsIgnoreCase((String) node.data))
+		{
+		   dom=node.next;
+		   
+		}
+		   node.next=dom.next;  
+		}
+	}
+			
+				
+		
 	
 	public void sortList()   ///------------2
     {  

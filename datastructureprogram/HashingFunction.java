@@ -1,64 +1,146 @@
 package com.bridgelabz.datastructureprogram;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Logger;
 
-import com.bridgelabz.utility.LinkedList;
-import com.bridgelabz.utility.Queue;
+public class HashingFunction<K> {
 
-public class HashingFunction 
-{
-	public static void main(String[] args) throws FileNotFoundException {
-		
-		
-		int[] array = new int[11];
-		int data = 0;
-		String demo = "";
-		File f = new File("/home/admin1/Desktop/tennumbers.txt");
-		Scanner sc = new Scanner(f);
+	class Entry<K> {
+		K key;
+		Entry<K> link;
 
-		while (sc.hasNextLine()) {
-			demo = sc.nextLine();
+		Entry(K key) {
+			this.key = key;
 		}
-		String[] arr = demo.split(" ");
-		int[] data1 = new int[arr.length];
-		LinkedList lsl = new LinkedList();
-		
+	}
 
-		for (int i = 0; i < arr.length; i++)
-		{
-			int num = Integer.parseInt(arr[i]);
-			data1[i] = num;
+	public static final Logger logger = Logger.getLogger(HashingFunction.class.getName());
+	int capacity = 11;
+	int index = 0;
+	Entry<K> next;
+	private Entry<K>[] map = new Entry[capacity];
 
-		}
-             
-		int value1[][] = new int[data1.length][data1.length];
-		int count = 0;
-		for (int i = 0; i < data1.length; i++) 
-		{
-			for (int k = 0; k < data1.length; k++) 
-			{
-				if (data1[k] % 11 == count) 
+	@SuppressWarnings("unchecked")
+	public void readFile() {
+		try (FileReader fr = new FileReader("E://Laratest/brid1.txt"); 
+				BufferedReader br = new BufferedReader(fr)) {
+			     String str = "";
+			while ((str = br.readLine()) != null) {
+				String[] sarr = str.split(" ");
+				for (int i = 0; i < sarr.length; i++) 
 				{
+					if (index == capacity - 1) 
+					{
+						return;
+					}
+					Integer keys = Integer.parseInt(sarr[i]);
+					int hashes = hash((K) keys);
+					Entry entry = new Entry(keys);
 
-					value1[i][k] = data1[k];
-
+					if (map[hashes] == null)
+					{
+						map[hashes] = entry;
+					} 
+					else 
+					{
+						next = map[hashes];
+						while (next.link != null) 
+						{
+							if (next.key.equals(keys))
+								break;
+							next = next.link;
+						}
+						if (next.link == null && !(next.key.equals(keys))) 
+						{
+							next.link = entry;
+						}
+					}
 				}
-
 			}
-			count++;
 		}
-
-		for (int i = 0; i < data1.length; i++)
+		catch (IOException e) 
 		{
-			for (int j = 0; j < data1.length; j++)
-			{
-				lsl.insert(value1[i][j]+"    ");
-			}
-			lsl.insert("\n");
+			logger.info(e.getMessage());
 		}
-         lsl.show();
+	}
 
+	private int hash(K key) 
+	{
+		return key.hashCode() % capacity;
+	}
+
+	public void display() 
+	{
+		for (int i = 0; i < map.length; i++)
+		{
+			next = map[i];
+			while (next != null) 
+			{
+				System.out.print(next.key + " ");
+				next = next.link;
+			}
+		}
+	}
+
+	public void search(K key)
+	{
+		int hashes = hash(key);
+		Entry<K> temp;
+		Entry<K> searchEntry = new Entry<K>(key);
+		if (map[hashes] == null) {
+			map[hashes] = searchEntry;
+			writeFile();
+			return;
+		}
+		if (map[hashes].key.equals(key)) 
+		{
+			map[hashes] = map[hashes].link;
+		}
+		else
+		{
+			next = map[hashes];
+			while (next.link != null) {
+				if (next.link.link == null) {
+					break;
+				}
+				if (next.link.key.equals(key)) {
+					temp = next.link;
+					next.link = temp.link;
+					temp = null;
+					writeFile();
+					return;
+				}
+				next = next.link;
+			}
+			if (next.link == null) {
+				next.link = searchEntry;
+			}
+			if (next.link.key.equals(key)) {
+				next.link = null;
+			} else {
+				next.link.link = searchEntry;
+			}
+		}
+		writeFile();
+	}
+
+	public void writeFile() 
+	{
+		try (FileWriter fw = new FileWriter("E://Laratest/brid.txt")) {
+			for (int i = 0; i < map.length; i++) {
+				next = map[i];
+				while (next != null)
+				{
+					fw.write(next.key.toString() + " ");
+					next = next.link;
+				}
+			}
+			fw.flush();
+		} catch (IOException e) {
+			logger.info(e.getMessage());
+		}
 	}
 }

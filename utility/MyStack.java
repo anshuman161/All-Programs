@@ -4,16 +4,12 @@ public class MyStack
 {
 	int size;
 	int top = -1;
-
-	
-	  public int getSize() { return size; }
-	  
-	  public void setSize(int size) { this.size = size; }
-	 
-       
-	char chr[] = new char[50];
-
-	public void pushandpop(char[] ch)
+ public void setSize(int size)
+ {
+	this.size = size;
+ }
+  char chr[] = new char[50];
+  public void pushandpop(char[] ch)
 	{
         
 		for (int i = 0; i < ch.length; i++) 
@@ -27,13 +23,11 @@ public class MyStack
 					push(ch[i]);
 
 				} 
-				else if (ch[i] == ')' && chr[top]=='(' ) 
+				else if (ch[i] == ')' ) 
 				{
 					pop();
 				}
-				/*
-				 * else if (ch[i]==')' && chr[top]==')') { System.out.println("Not balanced"); }
-				 */					
+				
 				
 			  }
 			}
@@ -52,7 +46,8 @@ public class MyStack
 	  }
 	}
    
-	public void push(char c1) {
+	public void push(char c1)
+	{
 
 		if (isFull())
 		{
@@ -63,7 +58,7 @@ public class MyStack
 		{
 			top=top+1;
             chr[top]='(';
-
+           System.out.println("(" + top);
 		}
 	}
 
@@ -71,13 +66,12 @@ public class MyStack
 	{
 		if (isEmpty())
 		{
-			System.out.println("stack underflow");
-			
+			System.out.println("stack underflow");				
 		}
 		else
 		{
 			top=top-1;
-
+          System.out.println(")" +top);
 		}
 	}
 
@@ -89,7 +83,7 @@ public class MyStack
 	  }
 	 
 	public boolean isEmpty() {
-		if (top == -1) {
+		if (top == -1 ) {
 			return true;
 		} 
 		else
@@ -107,10 +101,6 @@ public class MyStack
   ListNode top;
   int size;
   
-  
-  
-  
- 
 
 class ListNode<T>
   {

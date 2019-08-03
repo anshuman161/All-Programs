@@ -4,15 +4,9 @@ public class QueuePalindrome
 {
   String data;
   int size;
-  int front;
-  int rear;
-	
-	
-	public int getSize() {
-		return size;
-	}
-
-	public void setSize(int size) {
+ 
+	public void setSize(int size) 
+	{
 		this.size = size;
 	}
 	String demo1=""; 
@@ -26,7 +20,7 @@ public class QueuePalindrome
 	  for (int i = size-1; i >= 0; i--) 
 	     {
 			       demo=demo+data[i];
-	    	 
+	    	       
 		 }
 	 
 	  for (int i = 0; i < size; i++) 

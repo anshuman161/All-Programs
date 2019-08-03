@@ -1,40 +1,33 @@
 package com.bridgelabz.datastructureprogram;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.Scanner;
 
 import com.bridgelabz.utility.LinkedList;
-
+/**
+ * 
+ * 
+ * **/
 public class UnorderedList 
 {
-  public static void main(String[] args) 
+  public static void main(String[] args) throws IOException 
   {
-	  FileReader file = null;
-		try {
-			 file = new FileReader(new File("/home/admin1/Desktop/xyz.txt"));
-		} 
-		catch (FileNotFoundException e)
-		{
-			
-			e.printStackTrace();
-		}
-		   BufferedReader bfr = new BufferedReader(file);
-		   String line = null;
-		try {
-			line = bfr.readLine();
-		} 
-		catch (IOException e)
-		{
-		
-			e.printStackTrace();
+	
+	  String line=" ";
+	  File f = new File("/home/admin1/Desktop/xyz.txt");
+		Scanner sc = new Scanner(f);
+
+		while (sc.hasNextLine())
+        {
+			line = sc.nextLine();
 		}
 		    String[] str = line.split(" ");
 		   
-		    String value="";
+		  
 		    LinkedList list = new LinkedList();
 		    
 		 for (int i = 0; i < str.length; i++) 
@@ -44,9 +37,9 @@ public class UnorderedList
 		list.show();
 		
 		
-		Scanner sc = new Scanner(System.in);
-		String sname = sc.next();
-		//list.search(list.head, sname);
+		Scanner sc1 = new Scanner(System.in);
+		String sname = sc1.next();
+
 		boolean flag=true;
 		  for (int i = 0; i < str.length; i++) 
 		  { 
@@ -59,13 +52,12 @@ public class UnorderedList
 		  }
 		  if (flag) 
 		  {
-			
-			  list.insert(sname);  
-			     
+			  list.insert(sname);  		  
 		  }
-		 
-		  list.show();
-		
-		
+		FileOutputStream fis=new FileOutputStream("/home/admin1/Desktop/xyz.txt");
+		ObjectOutputStream obj=new ObjectOutputStream(fis);
+		obj.writeObject(list);
+		list.show();		
+		  
   }     
 }

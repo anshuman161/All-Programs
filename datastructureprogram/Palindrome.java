@@ -16,7 +16,6 @@ public class Palindrome
 		    int len=array.length;
 		   QueuePalindrome que=new QueuePalindrome();
 		   que.setSize(len);
-		   int size=que.getSize();
 		   que.enque(array);
 		   
 		  
