@@ -1,0 +1,23 @@
+[
+	{
+		"Rice": {
+			"price": "200",
+			"name": "Rice",
+			"weight": "2 kg"
+		}
+	},
+	{
+		"Pulses": {
+			"price": "100",
+			"name": "Pulses",
+			"weight": "1 kg"
+		}
+	},
+	{
+		"Wheats": {
+			"price": "180",
+			"name": "Wheats",
+			"weight": "1 kg"
+		}
+	}
+]
