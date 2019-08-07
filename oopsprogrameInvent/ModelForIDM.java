@@ -1,8 +1,8 @@
 package com.bridgelabz.oopsprogrameInvent;
 
-import org.codehaus.jackson.annotate.JsonPropertyOrder;
-
-@JsonPropertyOrder(value= {"name","weight","price"})
+//import org.codehaus.jackson.annotate.JsonPropertyOrder;
+//
+//@JsonPropertyOrder(value= {"name","weight","price"})
 public class ModelForIDM 
 {
  private String name;
