@@ -10,23 +10,35 @@ String message = "Hello <<name>>, We have your full name as <<full name>> in our
 Scanner sc=new Scanner(System.in);
 
 		System.out.println(message);
+		
+		System.out.println("Enter name ");
 		String next = sc.next();
-		message = message.replaceAll("<<name>>", next);
-		String next1 = sc.nextLine();
-		message = message.replaceAll("<<full name>>", next1);	
-		  //mobile no 
-		  String mob=sc.next(); 
-		  if (mob.matches("\\d{10}")) 
+		message = message.replace("<<name>>", next);
+
+		System.out.println("Enter full name ");
+		String next1 = sc.next();
+		message = message.replace("<<full name>>", next1);	
+		 
+		System.out.println("Enter mobile no");
+		  String phone=sc.next(); 
+		  if (phone.matches("\\d{10}")) 
 		  {
-		  message=message.replaceAll("xxxxxxxxxx", mob); 
+			  message=message.replace("xxxxxxxxxx", phone); 
 		  }
+		  else {
+			System.out.println("phone number is wrong");
+			
+		}
+	 
+		  System.out.println("Enter date....");
 
-	 //date format 
-	 String datenext=sc.next();
-
-	if(datenext.matches("([0-9]{2})/([0-9]{2})/([0-9]{4})"))
-	{
-		message = message.replaceAll("01/01/2016", datenext);
+          String datenext=sc.next();
+	   if(datenext.matches("([0-9]{2})/([0-9]{2})/([0-9]{4})"))
+	   {
+		message = message.replace("01/01/2016", datenext);
+	   }
+	   else {
+		System.out.println("Date format is wrong");
 	}
 		
          

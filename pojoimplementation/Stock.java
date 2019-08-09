@@ -1,4 +1,4 @@
-package com.bridgelabz.oopsprogramestockreport;
+package com.bridgelabz.pojoimplementation;
 
 public class Stock
 {

@@ -20,8 +20,8 @@ public class TestReadWriting {
 		};
 		List<ModelForIDM> modles = objMapper.readValue(inptStream, typeReference);
 		ModelForIDM model=new ModelForIDM();
-		model.setName("ddl do");
-		model.setPrice(41);
+		model.setName("sugar");
+		model.setPrice(32);
 		model.setWeight(14.0F);
 		modles.add(model);
 		objMapper.writeValue(file, modles);

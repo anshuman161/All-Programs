@@ -1,6 +1,8 @@
-package com.bridgelabz.oopsprogramestockreport;
+package com.bridgelabz.pojoimplementation;
 
 import java.util.List;
+
+import com.bridgelabz.pojoimplementation.Stock;
 
 public class CompanyDetails {
 	private String username;

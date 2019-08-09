@@ -13,6 +13,8 @@ import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
 
+import com.bridgelabz.pojoimplementation.CompanyDetails;
+
 public class UserBusiness 
 {
     public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {
