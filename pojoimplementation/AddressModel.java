@@ -1,14 +1,6 @@
 package com.bridgelabz.pojoimplementation;
 
-import java.io.IOException;
-import java.io.Writer;
-import java.util.LinkedHashMap;
-
-import org.json.simple.JSONAware;
-import org.json.simple.JSONStreamAware;
-import org.json.simple.JSONValue;
-
-public class AddressModel implements JSONStreamAware
+public class AddressModel 
 {
  private int id;
  private String firstname;
@@ -61,26 +53,7 @@ public String toString() {
  public AddressModel() {
 	// TODO Auto-generated constructor stub
 }
-public AddressModel(int id, String firstname, String lastname, long mobileno, String city, int zip) {
-	super();
-	this.id = id;
-	this.firstname = firstname;
-	this.lastname = lastname;
-	this.mobileno = mobileno;
-	this.city = city;
-	this.zip = zip;
-}
-@Override
-public void writeJSONString(Writer out) throws IOException {
-LinkedHashMap map=new LinkedHashMap();
-	map.put("id", String.valueOf(id));
-	map.put("firstname", "firstname");
-	map.put("lastname", "lastname");
-	map.put("mobileno", "mobileno");
-	map.put("city", "city");
-	map.put("zip", String.valueOf(zip));
-	JSONValue.writeJSONString(map, out);
-}
+
 
  
 }

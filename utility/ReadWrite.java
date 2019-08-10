@@ -1,4 +1,4 @@
-package com.bridgelabz.oopsprogrameJsonUtil;
+package com.bridgelabz.utility;
 
 import java.io.FileWriter;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.bridgelabz.oopsprogrameInvent;
+package com.bridgelabz.oopsprograme;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -17,14 +17,14 @@ public class TestRead {
 		
 		ObjectMapper objMapper = new ObjectMapper();
 		InputStream inptStream = new FileInputStream(new File("/home/admin1/Desktop/regex.json"));
-		TypeReference<List<ModelForIDM>> typeReference = new TypeReference<List<ModelForIDM>>() {
+		TypeReference<List<TestModelForIDM>> typeReference = new TypeReference<List<TestModelForIDM>>() {
 		};
-		List<ModelForIDM> modles = objMapper.readValue(inptStream, typeReference);
+		List<TestModelForIDM> modles = objMapper.readValue(inptStream, typeReference);
 
 		System.out.println("Enter Name");
 		Scanner sc=new  Scanner(System.in);
 		String Name = sc.nextLine();
-		for (ModelForIDM m : modles) {
+		for (TestModelForIDM m : modles) {
 			if(m.getName().equalsIgnoreCase(Name)) {
 				System.out.println(m);
 			}

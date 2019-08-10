@@ -4,12 +4,14 @@ import java.util.List;
 
 import com.bridgelabz.pojoimplementation.Stock;
 
-public class CompanyDetails {
+public class CompanyDetails 
+{
 	private String username;
 	private int amount;
 	private List<Stock> stockList;
 
-	public String getUsername() {
+	public String getUsername() 
+	{
 		return username;
 	}
 

@@ -1,6 +1,6 @@
 package com.bridgelabz.oopsprograme;
 
-import com.bridgelabz.oopsprogrameJsonUtil.MyJsonUtil;
+import com.bridgelabz.utility.MyJsonUtil;
 
 @SuppressWarnings("unused")
 public class Test 

@@ -1,4 +1,4 @@
-package com.bridgelabz.oopsprogramestockreport;
+package com.bridgelabz.oopsprograme;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,7 +15,7 @@ import org.codehaus.jackson.type.TypeReference;
 
 import com.bridgelabz.pojoimplementation.CompanyDetails;
 
-public class UserBusiness 
+public class UserBusinessStock 
 {
     public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {
 
@@ -38,7 +38,7 @@ public class UserBusiness
  		for (CompanyDetails companyDetails : modles) {
 			if(companyDetails.getUsername().equals(username))
 			{
-				Business business = new Business();
+				BusinessStock business = new BusinessStock();
 				companyDetails2 = business.getStockdetails(companyDetails, sharename, noofshare);
 				System.out.println(companyDetails2.getUsername()+" "+companyDetails2.getAmount()+" "+companyDetails2.getStockList());
 				
