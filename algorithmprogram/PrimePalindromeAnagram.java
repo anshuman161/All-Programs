@@ -1,5 +1,7 @@
 package com.bridgelabz.algorithmprogram;
 
+import com.bridgelabz.utility.MyUtil;
+
 public class PrimePalindromeAnagram {
 	public static void prim(int digit) {
 

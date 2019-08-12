@@ -1,4 +1,4 @@
-package com.bridgelabz.oopsprograme;
+package com.bridgelabz.oops.readwrite.myclass;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,6 +10,8 @@ import java.util.Scanner;
 
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
+
+import com.bridgelabz.oops.readwrite.pojo.TestModelForIDM;
 
 
 public class TestRead {

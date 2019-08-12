@@ -1,8 +1,6 @@
-package com.bridgelabz.pojoimplementation;
+package com.bridgelabz.oops.commercialdataprocessing.pojo;
 
 import java.util.List;
-
-import com.bridgelabz.pojoimplementation.Stock;
 
 public class CompanyDetails 
 {

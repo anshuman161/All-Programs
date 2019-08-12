@@ -52,6 +52,8 @@ public class LinkedList
 		System.out.println(node.data);
 	}
 	
+	
+	
 	public void removeatindex(int index)
 	{
           	   	if (index==0)

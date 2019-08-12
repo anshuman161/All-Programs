@@ -1,4 +1,4 @@
-package com.bridgelabz.pojoimplementation;
+package com.bridgelabz.oops.addressbook.pojo;
 
 public class AddressModel 
 {

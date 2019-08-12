@@ -1,4 +1,4 @@
-package com.bridgelabz.pojoimplementation;
+package com.bridgelabz.oops.commercialdataprocessing.pojo;
 
 public class Stock
 {
@@ -25,13 +25,13 @@ public void setShareprice(int shareprice) {
 	this.shareprice = shareprice;
 }
 
+
+	/*
 Stock(){}
-public Stock(String sharename, int noofshare, int shareprice) {
-	super();
-	this.sharename = sharename;
-	this.noofshare = noofshare;
-	this.shareprice = shareprice;
-}
+	 * public Stock(String sharename, int noofshare, int shareprice) { super();
+	 * this.sharename = sharename; this.noofshare = noofshare; this.shareprice =
+	 * shareprice; }
+	 */
 @Override
 public String toString() {
 	return "Stock [sharename=" + sharename + ", noofshare=" + noofshare + ", shareprice=" + shareprice + "]";

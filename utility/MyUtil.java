@@ -1,4 +1,4 @@
-package com.bridgelabz.algorithmprogram;
+package com.bridgelabz.utility;
 
 
 import java.text.ParseException;

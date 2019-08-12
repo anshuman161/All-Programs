@@ -1,4 +1,4 @@
-package com.bridgelabz.oopsprograme;
+package com.bridgelabz.oops.readwrite.myclass;
 
 import java.io.Serializable;
 

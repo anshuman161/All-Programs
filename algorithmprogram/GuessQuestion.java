@@ -1,5 +1,7 @@
 package com.bridgelabz.algorithmprogram;
 
+import com.bridgelabz.utility.AllSorting;
+
 public class GuessQuestion {
 
 	/*

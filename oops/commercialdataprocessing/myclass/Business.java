@@ -1,4 +1,4 @@
-package com.bridgelabz.oopsprograme;
+package com.bridgelabz.oops.commercialdataprocessing.myclass;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -12,10 +12,10 @@ import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
 
-import com.bridgelabz.pojoimplementation.CompanyDetails;
-import com.bridgelabz.pojoimplementation.Stock;
+import com.bridgelabz.oops.commercialdataprocessing.pojo.CompanyDetails;
+import com.bridgelabz.oops.commercialdataprocessing.pojo.Stock;
 
-public class BusinessStock
+public class Business
 {
 //getstockdetails method calling from userbusiness 
 	public CompanyDetails getStockdetails(CompanyDetails companyDetails, String ShareName, int NoOfShare)
@@ -29,7 +29,6 @@ public class BusinessStock
 		List<Stock> slist = companyDetails.getStockList();
 		ArrayList<Stock> stockList = objMapper.readValue(inptStream, typeReference);
 	
-		
 		for (Stock stock2 : stockList) 
 		{
 			if (stock2.getSharename().equals(ShareName)) 

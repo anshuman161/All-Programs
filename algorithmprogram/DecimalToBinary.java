@@ -1,5 +1,7 @@
 package com.bridgelabz.algorithmprogram;
 
+import com.bridgelabz.utility.MyUtil;
+
 public class DecimalToBinary
 {
 	public static int[] D2B()

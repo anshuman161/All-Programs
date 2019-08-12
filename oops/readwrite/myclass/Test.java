@@ -1,11 +1,12 @@
-package com.bridgelabz.oopsprograme;
+package com.bridgelabz.oops.readwrite.myclass;
 
 import com.bridgelabz.utility.MyJsonUtil;
 
 @SuppressWarnings("unused")
 public class Test 
 {
-	public static void main(String[] args) {
+	public void testmethod()
+	{
 		Emp emp=new Emp();
 		emp.setEmpno(101);
 		emp.setName("rama");
@@ -14,7 +15,7 @@ public class Test
 		    System.out.println(jsonemp);
 		    System.out.println("==============json to java====");
 		    Emp emp1=MyJsonUtil.jsontojava(jsonemp, Emp.class);
-		    System.out.println(emp1.getEmpno()+"   "+emp1.getName());
-		    
+		    System.out.println(emp1.getEmpno()+"   "+emp1.getName());	
 	}
+	
 }

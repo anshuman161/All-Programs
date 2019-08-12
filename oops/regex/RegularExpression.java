@@ -1,4 +1,4 @@
-package com.bridgelabz.oopsprograme;
+package com.bridgelabz.oops.regex;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;
