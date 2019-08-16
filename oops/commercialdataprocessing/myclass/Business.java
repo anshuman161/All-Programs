@@ -1,18 +1,13 @@
 package com.bridgelabz.oops.commercialdataprocessing.myclass;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.type.TypeReference;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -35,7 +30,6 @@ public class Business
 					.parse(new FileReader("/home/admin1/Desktop/stockdetails.json"));
 		  for (Object obj1 : jarr)
 		  {
-			  
 			  JSONObject obj2 = (JSONObject) obj1;
 			  Stock stock=new Stock();
 			  stock.setSharename((String)(obj2.get("sharename")));
