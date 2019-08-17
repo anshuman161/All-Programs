@@ -11,16 +11,16 @@ public class ComputerFactory
        Computer1 comp=null;
        switch (type)
        {
-	case PC:
+	    case PC:
 		comp=new PC(ram, hdd, pc);
 		break;
-	case Server:
+	    case Server:
 		comp=new Server(ram, hdd, pc);
 		break;
 
-	default:
+	    default:
 		break;
-	}
+	 }
 	return comp;
        
  }

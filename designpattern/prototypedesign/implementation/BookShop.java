@@ -20,12 +20,13 @@ public void setBooks(List<Book> books) {
 }
 public void load()
 {
-  for (int i = 0; i <= 5; i++) {
+  for (int i = 0; i <= 5; i++) 
+  {
 	Book b=new Book();
 	b.setId(i);
 	b.setBname("book name "+i);
 	getBooks().add(b);
-}	
+  }	
 }
 
 @Override
